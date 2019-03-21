@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.19.0",
+    "crypto-js": "file:node_modules/crypto-js",
     "file-system": "^2.2.2"
   }
 }
