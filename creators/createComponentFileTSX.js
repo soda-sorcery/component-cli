@@ -1,11 +1,11 @@
 const fs = require('file-system');
 
-function createComponentFileTSX(component) {
+const createComponentFileTSX = (component) => {
     const react = `import * as React from 'React'\n\n`;
     const css = `import './index.scss\n\n`;
     const props = `interface ${component}Props {}\n`;
     const state = `interface ${component}State {}\n\n\n`;
-    const c = `class ${component} extends React.Component\<${component}Props, ${component}State\> {\n\n\tpublic render() {\n\n\t}\n}\n`;
+    const c = `class ${component} extends React.Component\<${component}Props, ${component}State\> {\n\n\tpublic render() {\n\n\t}\n};\n`;
     const strs = [react, css, props, state, c];
 
 
@@ -16,6 +16,6 @@ function createComponentFileTSX(component) {
         });
         stream.end();
     });
-}
+};
 
 module.exports = createComponentFileTSX;
